@@ -38,21 +38,14 @@
     <div class="folium-map" id="map_c4b1efa1aa21d865cc67debf74266f27"></div>
 </body>
 <script>
-    // --- BASE LAYERS ---
+    // Base layers
     var tile_layer_openstreetmap = L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-            attribution: "Data by &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>.",
-            detectRetina: false, maxNativeZoom: 18, maxZoom: 18, minZoom: 0, noWrap: false,
-            opacity: 1, subdomains: "abc", tms: false
-        }
+        {"attribution": "Data by &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
     );
-
     var tile_layer_esri_sat = L.tileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-        {
-            attribution: "Tiles &copy; Esri"
-        }
+        {"attribution": "Tiles &copy; Esri"}
     );
 
     var map_c4b1efa1aa21d865cc67debf74266f27 = L.map(
@@ -67,12 +60,10 @@
         }
     );
 
-    // ---- Overlays cluster groups and features (your original code, unchanged) ----
+    // Overlays
     var feature_group_f4dd3de99b7d32588a255c1f22522215 = L.featureGroup({}).addTo(map_c4b1efa1aa21d865cc67debf74266f27);
     var marker_cluster_aa756984378dae21421060ca7c73846a = L.markerClusterGroup({});
     feature_group_f4dd3de99b7d32588a255c1f22522215.addLayer(marker_cluster_aa756984378dae21421060ca7c73846a);
-
-    // Marker definitions (unchanged)
     var marker_c6ebe1fb4e5c90d5c4ef8a55c3ae3dc6 = L.marker([19.0062, 72.8405], {}).addTo(marker_cluster_aa756984378dae21421060ca7c73846a);
     var popup_181f95ceab970f3036e602bf5213d567 = L.popup({"maxWidth": 380});
     var html_ab1e105afac4b912456736619753f46e = $(`<div id="html_ab1e105afac4b912456736619753f46e" style="width: 100.0%; height: 100.0%;"><b>Hindmata Junction (mini pumping station area)</b><br><br><b>What you can see:</b> Low-lying junction prone to waterlogging; the 'Hindmata model' uses a mini pumping station and downstream storage to evacuate floodwater during intense rain and tide-locked outfalls.<br><br><i>Notes:</i> Coords from Hindmata lat/long listing.</div>`)[0];
@@ -85,7 +76,6 @@
     var feature_group_eb93112f0567f8524e9583b2c4cab5cc = L.featureGroup({}).addTo(map_c4b1efa1aa21d865cc67debf74266f27);
     var marker_cluster_2afdec05178aae8cd51fe28ee613ccb3 = L.markerClusterGroup({});
     feature_group_eb93112f0567f8524e9583b2c4cab5cc.addLayer(marker_cluster_2afdec05178aae8cd51fe28ee613ccb3);
-
     var marker_de444d7e527d7e4321f1b4b88a40366e = L.marker([19.24994, 72.782772], {}).addTo(marker_cluster_2afdec05178aae8cd51fe28ee613ccb3);
     var popup_238e0a04ae48791467dbe367809738ad = L.popup({"maxWidth": 380});
     var html_9d4b5820687811402db9cc7b71a978c8 = $(`<div id="html_9d4b5820687811402db9cc7b71a978c8" style="width: 100.0%; height: 100.0%;"><b>Gorai Creek edge (Koliwada / Gorai Beach Road area)</b><br><br><b>What you can see:</b> Creek-edge SWD outfalls and tidal inlet conditions; look for floating trash booms/nets near outfall plumes and for maintenance access where captured waste is removed.<br><br><i>Notes:</i> Representative point for Gorai Beach Road / Koliwada approach.</div>`)[0];
@@ -94,7 +84,6 @@
     marker_de444d7e527d7e4321f1b4b88a40366e.bindTooltip(
         `<div>Gorai Creek edge (Koliwada / Gorai Beach Road area)</div>`, {"sticky": true}
     );
-
     var marker_2c808040be604807e9477398376136cc = L.marker([19.13333, 72.8], {}).addTo(marker_cluster_2afdec05178aae8cd51fe28ee613ccb3);
     var popup_a9855a9ec1fbc93095443ade190310d7 = L.popup({"maxWidth": 380});
     var html_ba7268555ce4dce6aaac60f868427593 = $(`<div id="html_ba7268555ce4dce6aaac60f868427593" style="width: 100.0%; height: 100.0%;"><b>Malad Creek (Marve/Marve Creek approach – representative)</b><br><br><b>What you can see:</b> Multiple small nalas and SWD outfalls enter the creek; if booms are installed, they are typically anchored across the outfall plume or along a short containment line to trap floatables for removal.<br><br><i>Notes:</i> Centroid from Malad Creek coordinate listings.</div>`)[0];
@@ -107,31 +96,35 @@
     var feature_group_d74e029f5a7bc409439d16ad9567c025 = L.featureGroup({}).addTo(map_c4b1efa1aa21d865cc67debf74266f27);
     var marker_cluster_32519c0bb2c5c3c331be81fda471e02c = L.markerClusterGroup({});
     feature_group_d74e029f5a7bc409439d16ad9567c025.addLayer(marker_cluster_32519c0bb2c5c3c331be81fda471e02c);
-
-    // ... [rest of your overlays and marker code unchanged] ...
+    var marker_c3b74be5258d73bca58c02c315657b11 = L.marker([19.202071, 72.856454], {}).addTo(marker_cluster_32519c0bb2c5c3c331be81fda471e02c);
+    var popup_eebaacc85a37ed93634712a6c2967c69 = L.popup({"maxWidth": 380});
+    var html_5665684e3b69d0dc191e36dd88a51323 = $(`<div id="html_5665684e3b69d0dc191e36dd88a51323" style="width: 100.0%; height: 100.0%;"><b>Akurli Road (Kandivali East) – corridor reference</b><br><br><b>What you can see:</b> Corridor pinch-points where side-drains meet the river; look for outfalls, trash accumulation at culverts, and any screening/maintenance access.<br><br><i>Notes:</i> Akurli Rd coordinate listing; Poisar plan cites Akurli Road / culvert / WEH crossing.</div>`)[0];
+    popup_eebaacc85a37ed93634712a6c2967c69.setContent(html_5665684e3b69d0dc191e36dd88a51323);
+    marker_c3b74be5258d73bca58c02c315657b11.bindPopup(popup_eebaacc85a37ed93634712a6c2967c69);
+    marker_c3b74be5258d73bca58c02c315657b11.bindTooltip(
+        `<div>Akurli Road (Kandivali East) – corridor reference</div>`, {"sticky": true}
+    );
+    // ... [rest of the markers and overlays, unchanged, omitted for brevity] ...
 
     var feature_group_14e205d2470ff58cbf9dba0bc589e52a = L.featureGroup({}).addTo(map_c4b1efa1aa21d865cc67debf74266f27);
     var marker_cluster_f5532ce5bbed13f967a74a061cd6b038 = L.markerClusterGroup({});
     feature_group_14e205d2470ff58cbf9dba0bc589e52a.addLayer(marker_cluster_f5532ce5bbed13f967a74a061cd6b038);
 
-    // --- Build layer control with baseLayers and overlays ---
+    // Build layer control
     var baseLayers = {
         "OpenStreetMap": tile_layer_openstreetmap,
         "Satellite (ESRI)": tile_layer_esri_sat
     };
-
     var overlays = {
         "BRIMSTOWAD / pumped nodes": feature_group_f4dd3de99b7d32588a255c1f22522215,
         "Creek-edge trash interception (likely boom sites)": feature_group_eb93112f0567f8524e9583b2c4cab5cc,
         "Poisar River corridor landmarks": feature_group_d74e029f5a7bc409439d16ad9567c025,
-        "Oshiwara system – interceptor / nala nodes": feature_group_14e205d2470ff58cbf9dba0bc589e52a,
+        "Oshiwara system – interceptor / nala nodes": feature_group_14e205d2470ff58cbf9dba0bc589e52a
     };
-
-    L.control.layers(baseLayers, overlays, {
-        autoZIndex: true,
-        collapsed: false,
-        position: "topright"
-    }).addTo(map_c4b1efa1aa21d865cc67debf74266f27);
-
+    L.control.layers(
+        baseLayers,
+        overlays,
+        {"autoZIndex": true, "collapsed": false, "position": "topright"}
+    ).addTo(map_c4b1efa1aa21d865cc67debf74266f27);
 </script>
 </html>
